@@ -1,0 +1,11 @@
+{
+    "DOMAIN": "mnpbot.ru",
+    "BOT": {
+        "USERNAME": "mnp24bot",
+        "HOST": "bot",
+        "TEST_USER": null
+    },
+    "API": {
+        "HOST": "app"
+    }
+}

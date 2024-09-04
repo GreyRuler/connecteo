@@ -1,0 +1,146 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscribers",
+  "info": {
+    "singularName": "subscriber",
+    "pluralName": "subscribers",
+    "displayName": "Пользователи",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "chatId": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "about": {
+      "type": "text",
+      "maxLength": 1200
+    },
+    "username": {
+      "type": "string",
+      "unique": false
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "email": {
+      "type": "email"
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "member",
+        "admin"
+      ],
+      "default": "member"
+    },
+    "locale": {
+      "type": "enumeration",
+      "enum": [
+        "ru",
+        "en"
+      ],
+      "default": "en"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "incoming": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::connect.connect",
+      "mappedBy": "recipient"
+    },
+    "sent": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::connect.connect",
+      "mappedBy": "sender"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "inversedBy": "subscribers"
+    },
+    "gotSticker": {
+      "type": "boolean",
+      "default": false
+    },
+    "suggests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch"
+    },
+    "lookingFors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::branch.branch"
+    },
+    "rank": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "wait",
+        "adopted",
+        "rejected"
+      ],
+      "default": "created"
+    },
+    "strategic_session": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::strategic-session.strategic-session",
+      "mappedBy": "subscriber"
+    },
+    "expert_room": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::expert-room.expert-room",
+      "mappedBy": "subscriber"
+    },
+    "konkurses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::konkurs.konkurs",
+      "inversedBy": "users"
+    },
+    "promos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::promo.promo",
+      "mappedBy": "subscriber"
+    }
+  }
+}

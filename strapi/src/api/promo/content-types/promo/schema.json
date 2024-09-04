@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promos",
+  "info": {
+    "singularName": "promo",
+    "pluralName": "promos",
+    "displayName": "Промокоды"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "promocode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "used": {
+      "type": "boolean",
+      "default": false
+    },
+    "subscriber": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subscriber.subscriber",
+      "inversedBy": "promos"
+    }
+  }
+}

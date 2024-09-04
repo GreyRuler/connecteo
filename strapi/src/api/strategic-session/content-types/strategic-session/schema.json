@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "strategic_sessions",
+  "info": {
+    "singularName": "strategic-session",
+    "pluralName": "strategic-sessions",
+    "displayName": "Стратегические сессии",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "surname": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "secondName": {
+      "type": "string",
+      "required": true
+    },
+    "company": {
+      "type": "string",
+      "required": true
+    },
+    "activity": {
+      "type": "string",
+      "required": true
+    },
+    "turnover": {
+      "type": "string",
+      "required": true
+    },
+    "employees": {
+      "type": "string",
+      "required": true
+    },
+    "subscriber": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscriber.subscriber",
+      "inversedBy": "strategic_session"
+    },
+    "problems": {
+      "type": "text",
+      "required": true
+    },
+    "request": {
+      "type": "text",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

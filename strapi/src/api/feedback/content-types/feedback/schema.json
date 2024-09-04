@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedbacks",
+  "info": {
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "Отзывы",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subscriber": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscriber.subscriber"
+    },
+    "review": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "DOMAIN": "mnpbot.ru",
+    "BOT": {
+        "TOKEN": "7015923674:AAGRlo0hZMGj-QBLE4AVSx9EfY_wCc_g6KE",
+        "PORT": 8443
+    },
+    "API": {
+        "HOST": "app",
+        "BEARER_TOKEN": ""
+    },
+    "SMS": {
+        "LOGIN": "z1578923574497",
+        "PASSWORD": "157579"
+    },
+    "MAIN_SERVER_API_KEY": "616fe1c0af7008a51f8add1023bc543dc179786696aaac83cb5ace96e421c7590c1982fb3b09b153a1af79dfda3ca3c0"
+}

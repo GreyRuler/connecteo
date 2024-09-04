@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "druk";
+  src: url("../public/assets/Druk_Text_Wide_Cyr_Heavy.otf");
+}
+
+@font-face {
+  font-family: "cera-bold";
+  src: url("../public/assets/CeraPro-Bold.ttf");
+}
+
+@font-face {
+  font-family: "cera-regular";
+  src: url("../public/assets/CeraPro-Regular.ttf");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: none;
+
+  background-color: White;
+  color: #000028;
+  font-family: 'cera-regular', 'sans-serif';
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  background-color: #C43251;
+  color: White;
+}
+
+.markup_wrapper {
+  h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: "druk", "sans-serif";
+  }
+
+  img {
+    border-radius: 16px;
+  }
+
+  b,
+  strong {
+    font-family: "cera-bold", "sans-serif";
+  }
+
+  a {
+    color: #C43251;
+  }
+
+  button {
+    width: 100% !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    padding: 10px !important;
+    color: black !important;
+    background-color: #DAD9E6 !important;
+  }
+}

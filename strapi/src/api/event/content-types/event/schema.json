@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Мероприятия",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "ending": {
+      "type": "date"
+    },
+    "subscribers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subscriber.subscriber",
+      "mappedBy": "events"
+    }
+  }
+}

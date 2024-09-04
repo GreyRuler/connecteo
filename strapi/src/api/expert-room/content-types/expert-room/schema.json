@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expert_rooms",
+  "info": {
+    "singularName": "expert-room",
+    "pluralName": "expert-rooms",
+    "displayName": "Менторская гостиная",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "surname": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "secondName": {
+      "type": "string",
+      "required": true
+    },
+    "region": {
+      "type": "string",
+      "required": true
+    },
+    "request": {
+      "type": "text",
+      "required": true
+    },
+    "subscriber": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subscriber.subscriber",
+      "inversedBy": "expert_room"
+    },
+    "visit_date": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

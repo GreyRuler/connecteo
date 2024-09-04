@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "konkurses",
+  "info": {
+    "singularName": "konkurs",
+    "pluralName": "konkurses",
+    "displayName": "Конкурсы",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "conditions": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::message.message"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subscriber.subscriber",
+      "inversedBy": "konkurses"
+    },
+    "ended": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
